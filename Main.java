@@ -21,6 +21,25 @@ public class Main {
         System.out.println("Perimetro del rettangolo: " + rettangolo.calcolaPerimetro());
         System.out.println("Area del rettangolo: " + rettangolo.calcolaArea());
 
+        // Ridimensionamento
+        System.out.println(" ");
+        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println("RIDIMENSIONAMENTO DEL RETTANGOLO:");
+        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*");
+        System.out.println(" ");
+        System.out.println("Inserisci la nuova base:");
+        double n_Base = in.nextDouble();
+
+        System.out.println("Inserisci la nuova altezza:");
+        double n_Altezza = in.nextDouble();
+
+        // Ridimensionato Finito
+        rettangolo.aggiornaDimensioni(n_Base, n_Altezza);
+
+        // Stampa tutto ridimensionato
+        System.out.println(" ");
+        System.out.println("Nuovo perimetro del rettangolo: " + rettangolo.calcolaPerimetro());
+        System.out.println("Nuova area del rettangolo: " + rettangolo.calcolaArea());
     }
 }
 
@@ -34,6 +53,11 @@ class Rettangolo {
         altezza = alt;
     }
 
+    // Metodo per aggiornare le dimensioni del rettangolo
+    public void aggiornaDimensioni(double n_Larghezza, double n_Altezza) {
+        larghezza = n_Larghezza;
+        altezza = n_Altezza;
+    }
 
     // Metodo per calcolare il perimetro
     public double calcolaPerimetro() {
